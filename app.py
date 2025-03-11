@@ -6,6 +6,7 @@ import json
 import random
 import torch.nn as nn
 from nltk.stem import WordNetLemmatizer
+nltk.data.path.append("https://fantastic-memory-7gvx5x597g7hppqq.github.dev/?folder=%2Fhome%2Fvscode%2Fnltk_data")
 nltk.download('punkt_tab')
 # Download NLTK resources if not already present
 try:
