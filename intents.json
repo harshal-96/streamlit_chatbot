@@ -1,0 +1,480 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day", "What's up?", "Greetings"
+      ],
+      "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+            "Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me", "I appreciate it", "Much appreciated", "Thank you very much",
+    "Thanks a lot"      ],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [
+        "I don't understand", "Not sure what you mean", "Could you explain that?", "What do you mean?", "I didn't get that"
+      ],
+      "responses": ["Sorry, I didn't catch that", "Could you please rephrase?", "I didn't understand your request"],
+      "context": [""]
+    },
+    {
+      "tag": "account_balance",
+      "patterns": [
+             "What is my remaining loan balance?", "Check my loan amount", "How much loan do I have left?", "Loan balance inquiry", "Show my outstanding loan amount", "How much do I owe on my loan?", "Loan repayment balance", "What’s my pending loan amount?", "Tell me my remaining loan dues", "How much loan do I need to pay?", "What’s the remaining amount on my loan?", "Check my unpaid loan balance", "How much is left on my loan?", "Show my total outstanding loan balance", "Can I check my loan balance now?", "Check my loan due amount", "How much of my loan is unpaid?", "What’s my total loan debt?", "Tell me how much loan I have left to pay", "Show my loan details", "How much is my remaining principal amount?", "How much is due on my loan?", "How much loan amount is outstanding?", "Can I see my remaining EMIs?", "What’s my current outstanding loan?", "Tell me my EMI balance", "How much more do I need to pay for my loan?", "Check my next EMI due amount", "How much principal and interest is left on my loan?", "How much is my total loan amount left?", "Tell me my unpaid loan balance", "What’s my loan account balance?", "Can I check my loan summary?", "How much do I need to clear my loan?", "Can I check how much loan I still have?", "Tell me my unpaid loan dues", "How much is my next loan installment?", "Tell me the remaining tenure of my loan", "How much loan is pending after my last payment?", "What’s my current loan status?", "Check my total loan amount left", "Can you fetch my loan balance details?", "Show my loan repayment details", "How much do I owe on my personal loan?", "What’s the remaining balance of my home loan?", "Check my business loan balance", "How much is left on my car loan?", "How much loan amount is left after my last payment?", "Can I see my remaining debt?", "What’s my loan status after my last EMI?", "Check if my loan payment has been updated", "Tell me my total remaining loan"],
+      "responses": ["Fetching your account balance...", "Your current balance is being retrieved..."],
+      "context": [""]
+    },
+    {
+      "tag": "fund_transfer",
+      "patterns": ["I want to transfer money", "Send money to another account", "Transfer funds", "How can I transfer money?", "Initiate a bank transfer", "Make a transfer", "Move funds between accounts", "Can you help me transfer money?", "I need to send money", "How do I send money online?", "I want to send funds to someone", "Transfer money from my account", "Send money now", "Can I transfer money instantly?", "I need to move some money", "Help me with a money transfer", "How do I transfer funds?", "Can I send money to another user?", "I want to send cash", "Guide me on transferring money", "Move my funds", "Shift money from one account to another", "Transfer funds between my accounts", "How can I send money fast?", "Move money to another bank", "Make an online bank transfer", "Process my money transfer", "Send funds to another bank", "I need to do a bank transfer", "How to move my money?", "Transfer funds to another person", "How much can I transfer?", "Transfer money to a mobile number", "Send money via bank transfer", "Can I send money using UPI?", "Help me transfer money online", "What’s the process to send money?", "I want to do a quick money transfer", "How do I initiate a funds transfer?", "Can I move my funds instantly?", "How do I make a bank transaction?", "Send money using my bank app", "Can I schedule a fund transfer?", "Help me with fund transfer details","Transfer money now", "Initiate fund transfer", "Start a money transfer", "Send funds to an account", "Process a transfer", "Begin a fund transfer", "Transfer funds immediately"],
+      "responses": ["To which account would you like to transfer the money?", "Please provide the recipient's account details."],
+      "context": ["initiate_fund_transfer"]
+    },
+     {
+      "tag": "transaction_history",
+      "patterns": [
+        "Show me my transaction history", "I want to see my past transactions", "View my transaction details", "Can I get a list of my recent transactions?", "Transaction history", "Recent transactions", "My transaction log", "Check my last transactions", "Show my previous transactions", "Display my transaction history", "List my recent transactions", "Get my transaction summary", "View my payment history", "I need to check my transactions", "See my bank transactions", "Show my payment records", "Can you show me my latest transactions?", "Retrieve my transaction history", "Fetch my past payments", "Show my spending history", "How can I check my transactions?", "Give me a summary of my transactions", "I need to review my past payments", "Show all my financial transactions", "Check my recent debits and credits", "How do I see my last transactions?", "Show my last 10 transactions", "Get my latest account transactions", "What were my last few payments?", "Where can I check my previous payments?", "List my last transactions", "View my transaction report", "See my last money transfers", "How do I access my transaction details?", "Check my financial transactions", "I need my recent bank history", "Give me details of my latest transactions", "Fetch my last payment details", "I want to check my deposit history", "Show my withdrawal history", "Can I see my last month’s transactions?", "Show my transactions for this month", "View my bill payments", "Display all my transaction logs", "I need proof of my last payment", "Can I download my transaction history?", "Get my detailed account statement", "Show transactions from the past week", "List all my debits and credits", "Show my loan payment transactions", "Give me my EMI payment history", "What payments have I made recently?", "Tell me my transaction summary", "I want to check my financial activity", "Where can I find my transaction logs?", "Check my last online transactions", "Fetch my bill payment history", "Show my most recent fund transfers", "I need a record of my last payments", "View my bank's transaction records", "What payments have been processed?", "Display my payment transactions", "Where can I get my financial summary?", "Fetch all my banking activities"
+ ],
+      "responses": ["Retrieving your transaction history...", "Here are your recent transactions."],
+      "context": [""]
+    },
+    {
+      "tag": "branch_details",
+      "patterns": [
+         "Where are your branches located?", "Give me details of your branches", "Tell me about your branches", "Provide branch details", "List all your branch locations", "Where can I find your branches?", "Show me your branch locations", "I need information about your branches", "Can you share details of your branches?", "Where are your offices?", "How many branches do you have?", "Give me a list of all your branches", "What are the addresses of your branches?", "Where is your corporate office?", "Show me your branch network", "List all your office locations", "Tell me about your available branches", "I need contact details of your branches", "Can you provide phone numbers for your branches?", "Where is the nearest customer service center?", "List all cities where you have branches", "Tell me which branch handles loan services", "What facilities are available at your branches?", "Can I visit a branch for loan-related inquiries?", "Which branch has customer support staff?", "Can you provide me the map location of your branches?", "How do I reach your nearest branch?", "Can I get directions to one of your branches?", "Do you have a branch near my workplace?", "Do you have branches in multiple states?", "How can I contact a specific branch?"
+],
+
+      "responses": ["Please provide your location or the name of the city.", "Where would you like to find a branch?"],
+      "context": [""]
+    },
+    {
+      "tag": "search_branch_by_location",
+      "patterns": [
+        "I want to find a branch", "Search for nearby branches", "Find a branch in my area", "Locate a service branch", "Branch search", "Find a branch near me", "Locate a branch in the city", "Where is the nearest branch?", "Find me a nearby service center", "Locate the closest branch", "Show me branches in my area", "Where can I find your branch?", "Search for a branch near me", "Tell me where your branches are", "Find my nearest service location", "Find a branch close to me", "Show me a map of nearby branches", "Can you find a branch near my location?", "I need directions to the nearest branch", "Where is the closest customer service center?", "Show me the available branches", "Where can I visit a branch?", "Which is the closest branch to my home?", "Can you locate a branch for me?", "Find branches in my neighborhood", "Where is the nearest loan service center?", "I need a branch near my office", "Find a service branch near my current location", "Tell me the address of the closest branch", "Show me the closest locations", "Where is your nearest walk-in center?", "Tell me where your nearest service location is", "Help me locate a branch", "Find a branch in this city", "List the nearest branch locations", "Give me directions to the nearest branch", "Can I visit a branch near me?", "Find service centers near my place", "Where do I find your service center?", "Give me a list of nearby branches", "Which branch is open near me?", "Can you provide details of a branch near me?", "Locate an office near me", "Find the nearest financial service center", "What is the address of the closest branch?", "Find the nearest location", "How can I reach the closest branch?", "Locate the nearest service office", "Which branch is closest to my workplace?", "Help me find a local branch", "Show me the locations of your service centers", "Find a branch close to my residence", "Where can I find your nearest office?", "Give me a location of the closest service branch", "Do you have a branch near my area?", "Where do I go for in-person assistance?", "Find a support center near me", "Tell me the location of your nearest walk-in office", "Give me the contact details of the nearest branch", "Where is the nearest service location?", "Find a support center in my city", "Where can I visit a representative?", "Do you have an office near my area?", "Which is your nearest customer service office?", "Find an office location near me", "I need to visit your nearest branch"
+      ],
+      "responses": ["Searching for branches near your location...", "Finding bank branches in the specified area."],
+      "context": [""]
+    },
+    {
+      "tag": "loan_inquiry",
+      "patterns": [
+        "Tell me about loan options", "What loans do you offer?", "I want to inquire about loans", "Loan options", "Available loans", "Information on loans", "Types of loans available", "What kind of loans can I apply for?", "Show me your loan offerings", "What are the different loan plans?", "Give me details on your loan products", "List the loans you provide", "What loans are currently available?", "Do you offer personal loans?", "Can I get a business loan?", "Tell me about your loan services", "What loan plans do you have?", "What are the eligibility criteria for loans?", "I need information on loan eligibility", "How can I apply for a loan?", "What is the loan application process?", "Steps to apply for a loan?", "Guide me on how to take a loan", "Do you provide home loans?", "Do you have car loans?", "Which loans require collateral?", "Do you provide loans without collateral?", "Tell me about secured and unsecured loans", "What is the loan repayment period?", "What loan tenure options do you offer?", "Do you have flexible repayment options?", "Do you offer instant loans?", "How much loan amount can I get?", "What is the minimum and maximum loan amount?", "Tell me the repayment terms for your loans", "What documents do I need for a loan?", "Is there a processing fee for loans?", "What is the loan approval process?", "How long does it take to get a loan approved?", "Do you provide short-term loans?", "What is the EMI for different loans?", "Can I get a loan without income proof?", "Do you have loans for self-employed individuals?", "What are the eligibility requirements for a personal loan?", "What is the age limit for applying for a loan?", "How soon can I get a loan disbursed?", "Can I check my loan eligibility online?", "Do you provide emergency loans?", "Tell me about education loans", "Do you have loans for small businesses?", "Is there a prepayment option for loans?", "Can I foreclose my loan early?", "What happens if I miss an EMI?", "What is the penalty for late EMI payment?", "Do you have a grace period for loan payments?", "Are there any hidden charges on loans?", "Can I transfer my loan to another lender?", "What is the processing fee for loans?", "How much time does it take for loan approval?", "Do I need a guarantor for a loan?", "Can I apply for a loan online?", "How do I track my loan application status?", "What is the minimum credit score required for a loan?", "Do you offer loans based on CIBIL score?", "How does my credit score affect my loan application?", "Can I take multiple loans at once?", "Do you provide loans to first-time borrowers?", "Can I increase my loan amount after approval?", "Do you offer top-up loans?", "What is the difference between a personal loan and a business loan?", "Do you offer loans with flexible EMI options?", "Do you have loans for salaried professionals?", "Can I get a loan if I am a freelancer?", "Are there special loan schemes for government employees?", "What is the maximum tenure for a loan?", "What are the repayment modes for loans?", "Is auto-debit available for EMI payments?", "What happens if I default on my loan?", "Do you provide loans for startups?", "Are there special loans for women entrepreneurs?", "What is the processing time for business loans?", "Can I get a loan with a low credit score?", "Do you have loans for agricultural businesses?", "Can I get a loan for medical expenses?", "Do you provide loans against property?", "Do you offer overdraft loan facilities?", "Can I transfer my loan balance to another bank or NBFC?", "Do you offer special loan schemes during festivals?", "Can I negotiate my loan interest rate?", "What documents are needed for business loans?", "Do you have a dedicated loan advisor?", "Can I apply for a joint loan?",
+"Apply loan",
+  "Loan application",
+  "Start loan application",
+  "Submit loan request",
+  "New loan request",
+  "Loan apply online",
+  "Begin loan process",
+  "Initiate loan",
+  "Apply for credit",
+  "Fill loan form",
+  "How to apply loan",
+  "Loan request form",
+  "Apply for home loan",
+  "Apply for personal loan",
+  "Apply for car loan",
+  "Apply for business loan",
+  "Apply for student loan",
+  "Loan application form",
+  "Get loan online",
+  "Apply for mortgage",
+  "Loan application steps",
+  "Loan registration",
+  "Request loan",
+  "Apply now for loan",
+  "Loan submission",
+"vehicle loan","MSME loan","Gold Loan","Home loan","Personal Loan","Business Loan"
+],
+      "responses": ["Here are the available loan options...", "Let me show you the types of loans we offer."],
+      "context": [""]
+    },
+    {
+      "tag": "loan_application_status",
+      "patterns": [
+         "What is the status of my loan application?", "Check my loan application status", "Loan application update", "Status of my loan", "Loan application progress", "Current status of my loan application", "Can you check my loan application?", "How do I check my loan status?", "Track my loan application", "Give me an update on my loan application", "I want to know my loan approval status", "Has my loan been approved?", "What is the progress of my loan request?", "Is my loan application approved?", "Tell me my loan processing status", "Has my loan been processed?", "Check my loan request status", "Is my loan application under review?", "When will my loan be approved?", "How long does it take for loan approval?", "Can you provide a loan application update?", "Is my loan in the final approval stage?", "Has my loan been sanctioned?", "When will I receive my loan approval?", "Tell me the expected approval time for my loan", "Check my loan verification status", "What stage is my loan application at?", "How can I track my loan approval?", "Check loan approval progress", "How do I follow up on my loan application?", "What is the turnaround time for loan processing?", "Why is my loan application delayed?", "Has my loan been rejected?", "Was my loan request successful?", "Why is my loan approval taking so long?", "How do I get updates on my loan processing?", "Tell me my loan application number status", "Has my loan been sent for disbursement?", "Can I check my loan status online?", "Do you have an online portal to check loan status?", "How do I check my loan status via mobile?", "Is there a way to track my loan on your website?", "Can I get my loan status via SMS?", "Check my loan status using my reference number", "I want to verify my loan status online", "When will my loan amount be credited?", "Has my loan been disbursed?", "How do I check if my loan is disbursed?", "Check loan disbursement details", "What is the status of my disbursal request?", "Tell me if my loan amount has been transferred", "When will my approved loan be credited?", "Can you tell me my loan release status?", "How can I speed up my loan approval?", "Why is my loan application still pending?", "My loan request is under review, what does that mean?", "How do I know if my loan is in the final stage?", "Loan status update please", "Has my loan verification been completed?", "Why is my loan application in pending status?", "Loan request update needed", "Check my loan under processing", "What is the expected approval date for my loan?", "Tell me if my loan application is successful", "How much longer will it take for my loan to be approved?", "My loan application was submitted, when will I get an update?", "Please provide a status update for my loan request", "Is my loan approved or rejected?", "How do I check if my loan is still being processed?", "I haven’t received any update on my loan status", "Loan verification pending, what should I do?", "Is my loan in the final processing stage?", "Loan application pending, when will I know?", "Why is my loan application still in review?"
+      ],
+      "responses": ["Checking the status of your loan application...", "Here is the update on your loan application."],
+      "context": [""]
+    },
+    {
+      "tag": "security_advice",
+      "patterns": [
+        "How can I secure my account?", "What are the security best practices?", "Report suspicious activity", "Security tips", "Account security advice", "How to protect my account", "Safety measures", "How do I keep my account safe?", "Best practices for online security", "How can I prevent fraud?", "Protect my personal information", "Tips to avoid hacking", "How to set a strong password?", "What should I do if I notice suspicious activity?", "How do I recognize phishing scams?", "How to avoid scams?", "Warning signs of fraud", "How to detect fraudulent emails?", "What are common online scams?", "How to verify if a message is genuine?", "How to identify fake customer support calls?", "How do you protect my financial data?", "Is it safe to share my personal information?", "What are your security policies?", "How do you prevent unauthorized access?", "How do you handle cybersecurity threats?", "How do I keep my account safe?", "Best practices for online security", "How to prevent unauthorized access?", "Tips to stay safe online", "Things to avoid for better security", "How do I create a strong password?", "Is my password strong enough?", "How to recognize fake messages?", "How to avoid scams?", "Things I should never share online", "Why should I not share my OTP?", "Should I share my account details with anyone?", "Is it safe to save my password in my browser?", "Why should I avoid using public Wi-Fi for logins?", "Should I allow third-party access to my account?", "Is it safe to use password managers?", "What should I do if I receive a suspicious email?", "Why should I verify links before clicking?", "How to avoid downloading malicious files?", "Should I enable email alerts for login activity?", "What are the risks of using weak passwords?", "Why should I avoid sharing personal details on social media?", "Is it safe to log in from another person's device?", "How can I check if my device is secure?", "Is it safe to store my login credentials on my phone?", "What should I avoid while making online transactions?", "Why should I not share my CVV or card PIN?", "Is using a virtual card safer?", "How to ensure my financial details are secure?", "What steps can I take to improve my online safety?", "Why should I not share my login credentials over the phone?"   
+],
+      "responses": ["Here are some security best practices to protect your account...", "To report suspicious activity, please contact our support team."],
+      "context": [""]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "I want to provide feedback", "How can I give feedback?", "Give feedback", "Suggestions", "Feedback on the service", "How to submit feedback", "Share my thoughts", "Where can I leave a review?", "I want to rate your service", "How do I share my experience?", "Provide a review", "Leave a comment", "Give a service rating", "I want to report my experience", "How do I send my suggestions?", "I have an idea for improvement", "Can I suggest an update?", "I want to share my opinion", "How can I suggest changes?", "Provide input on service quality", "Where can I send my thoughts?", "Is there a way to leave feedback?", "I want to share my concerns", "Give my thoughts on the service", "How do I give feedback on my experience?", "I want to express my satisfaction", "How can I review my loan experience?", "Can I give feedback on customer support?", "Where do I submit suggestions?", "How do I provide input on your app?", "I have some thoughts on your process", "I have feedback about the loan process", "I want to compliment your service", "Can I report a good experience?", "I want to share my satisfaction", "Can I leave a positive review?", "Where can I write my feedback?", "How can I rate my experience?", "I want to send a suggestion for improvement", "Do you accept customer feedback?", "Can I give feedback about the website?", "Can I help improve your service?", "How do I provide constructive feedback?", "I have a comment about my transaction", "How do I let you know my thoughts?", "I’d like to suggest some improvements"
+      ],
+      "responses": ["We value your feedback! Please let us know your suggestions or concerns."],
+      "context": [""]
+    },
+  {
+  "tag": "regulatory_info",
+  "patterns": [
+    "Tell me about regulatory requirements for loans",
+    "Regulatory changes in loan approvals",
+    "Compliance information for borrowers",
+    "Regulatory details for NBFC loans",
+    "Loan regulations for customers",
+    "Compliance updates for loan applications",
+    "What are the latest rules for loan approval?",
+    "Do I need to update my details for loan processing?",
+    "What documents are required for loan approval?",
+    "Tell me about customer verification rules for loans",
+    "Why are regulatory norms mandatory for loans?",
+    "Are there any changes in loan regulations?",
+    "What are the compliance rules for loan applications?",
+    "What happens if I don’t follow loan compliance rules?",
+    "How often should I update my loan details?",
+    "Are there any new regulatory policies for loans?",
+    "What are the RBI rules for NBFCs?",
+    "What are the compliance norms for loans?",
+    "Is there a deadline for updating loan documents?",
+    "What are the requirements for loan disbursal?",
+    "What regulatory guidelines apply to borrowers?",
+    "How do I stay updated on regulatory changes for loans?",
+    "What are the legal requirements for taking a loan?",
+    "Are there any restrictions on loan eligibility?",
+    "Do I need PAN for loan approval?",
+    "What are the rules for loan repayment?",
+    "What is the process for submitting loan documents?",
+    "Why was my loan application rejected due to compliance issues?",
+    "What is the impact of regulatory changes on loans?",
+    "Are NBFCs regulated differently than banks?",
+    "What are the RBI norms for NBFC loans?",
+    "Do I need to update my information for loan renewal?",
+    "Can I use digital documents for loan applications?",
+    "Are there different regulatory requirements for different loan types?",
+    "Does my address proof need to be updated for loan processing?",
+    "How does regulatory compliance affect my loan?",
+    "What happens if my loan-related details are outdated?",
+    "What are the rules for verifying loan applicants?",
+    "Are self-employed individuals required to follow different compliance rules?",
+    "Are digital document submissions accepted for loans?"
+  ],
+  "responses": ["Here is the information on regulatory changes affecting customers."],  
+  "context": [""]
+  },
+    {
+      "tag": "education_resources",
+      "patterns": [
+      "I need financial literacy resources", "Personal finance tips", "Financial guides", "Educational resources", "Learn about finance", "Financial education", "Finance tips and resources", "How can I improve my financial knowledge?", "Where can I learn about loans and finance?", "Teach me about personal finance", "What are some good finance learning resources?", "How do I manage my finances better?", "Provide financial learning materials", "Do you have any articles on financial planning?", "Give me resources for better money management", "How can I learn about budgeting?", "Are there any finance courses available?", "Can you share financial learning guides?", "What are some best practices for managing money?", "How do I learn about saving and investing?", "What is the best way to build financial discipline?", "Explain financial management for beginners", "How can I make better financial decisions?", "Are there resources for understanding loans?", "Where can I get financial advice?", "Do you provide educational material on debt management?", "How can I learn about credit scores and loans?", "What are the key concepts in financial literacy?", "Help me understand financial terms", "Are there any videos or blogs on personal finance?", "How do I build financial security?", "Can I get guides for saving money?", "Explain the basics of banking and finance", "Where can I learn about investment strategies?", "What should I know about loans before applying?", "How does inflation affect my savings?", "Can you suggest websites for learning about finance?", "How do I track my expenses better?", "What are the best tools for financial planning?", "What’s the importance of an emergency fund?", "How do I create a solid financial plan?","Where can I find reliable financial news?", "Are there government resources for financial education?", "How do I improve my credit score?", "What are common financial mistakes to avoid?", "What’s the best way to get out of debt?", "How do I save money on taxes?", "Can you recommend a financial literacy course?", "How can I reduce unnecessary expenses?", "What are the best budgeting techniques?", "Where can I learn about home loans?", "What should I know before taking a personal loan?","What’s the best way to save for retirement?", "What are some tips for financial independence?","Where can I learn about business finance?", "How do I improve my financial habits?", "What are the best financial practices for young professionals?","How do I create a financial roadmap for myself?", "Where can I get expert financial advice?", "What’s the best way to stay financially disciplined?"],
+      "responses": ["Here are some resources and guides to help you with personal finance management."],
+      "context": [""]
+    },
+    {
+      "tag": "spelling_mistake",
+      "patterns": [
+        "I can't spell", "I made a typo", "Spelling mistake", "Wrong spelling", "Typo", "Spelling error", "Incorrect spelling"
+      ],
+      "responses": ["It looks like there was a typo. Can you please clarify or rephrase?"],
+      "context": [""]
+    },
+
+    {
+      "tag": "account_statements",
+      "patterns": [
+       "Generate my account statement", "Download account statement", "Show account statement", "Account statement request", "Get my account statement", "View account statement", "Account statement details", "How can I get my account statement?", "Provide my account statement", "I need a copy of my account statement", "Download my account summary", "Request for account statement", "Can you generate my account statement?", "Where can I find my account statement?", "Can I download my account statement?", "Monthly account statement", "View my past transactions", "I need my account statement for this month", "Statement of my account", "Show my recent account statement", "How do I access my account statement?", "Give me my latest account statement", "Send me my account statement", "Get my detailed account statement", "Retrieve my account statement", "Show me my past account statements", "How can I see my old account statements?", "Can I get an account statement for last year?", "Request account statement for a specific period", "Fetch my account statement", "Statement of transactions", "How do I generate my statement?", "Check my statement details", "Email my account statement", "I want to download my transaction statement", "Get my bank account statement", "I need an account statement for tax purposes", "How do I request an official account statement?", "Can I see my account statement online?", "How long does it take to get an account statement?", "Is my account statement available?", "Print my account statement", "Account statement for verification", "View my financial statement", "Check my account history", "Retrieve my statement for last 6 months"
+      ],
+      "responses": ["Generating your account statement...", "Here is your account statement."],
+      "context": ["account_statements"]
+    },
+    {
+      "tag": "website_info",
+      "patterns": [
+        "Tell me about your website", "Website information", "Website features", "What can I do on the website?", "Website services", "Details about the website", "Website overview", "How does your website work?", "What features does your website offer?", "Guide me through your website", "What services can I access on your website?", "What is your website used for?", "How do I navigate your website?", "Is there an online portal for account management?", "Can I manage my account through your website?", "What options are available on your website?", "How do I log in to your website?", "What kind of support is available on your website?", "Where can I apply for a loan on your website?", "Can I check my loan details on your website?", "Do you offer online customer service?", "Can I update my profile on your website?", "Does your website have a help section?", "How do I register on your website?", "What do I need to sign up on your website?", "Can I track my loan status through your website?", "How do I reset my password on your website?", "Is there an FAQ section on your website?", "Can I download my account statement from the website?", "Is your website available 24/7?", "Can I use your website on my phone?", "Is there a mobile version of your website?", "How secure is your website?", "Do I need an account to use your website?", "Where can I find your terms and conditions?", "Can I make payments through your website?", "How do I contact support through your website?"
+      ],
+      "responses": ["Our website offers a range of services including account management, loan applications, and customer support. How can I assist you with it?"],
+      "context": ["website_info"]
+    },
+    {
+      "tag": "savings_schemes",
+      "patterns": [
+        "What are your savings schemes?", "Available savings plans",
+        "Fixed deposit rates", "Recurring deposit schemes", "Term deposit options",
+        "Best savings options", "High interest savings", "Long term savings plans",
+        "Short term savings", "Monthly savings schemes", "Annual savings plans",
+        "Regular savings options", "Flexible savings schemes", "Daily savings plans",
+        "Senior citizen savings", "Women's savings schemes", "Special savings rates",
+        "Corporate savings plans", "Business savings options", "Group savings schemes",
+        "Joint savings accounts", "Minor savings plans", "Youth savings schemes",
+        "Tax saving options", "Investment savings plans", "Child savings plans",
+        "Premium savings options", "Elite savings schemes", "Priority savings plans",
+        "Digital savings options", "Online savings schemes", "Mobile savings plans",
+        "Automated savings", "Smart savings options", "Flexible savings plans",
+        "Cumulative savings", "Non-cumulative savings", "Monthly payout schemes",
+        "Quarterly payout plans", "Annual payout options", "Interest payout schemes",
+        "Multiple deposit plans", "Single deposit schemes", "Bulk deposit options",
+        "Special rate schemes", "Festival savings plans", "Seasonal savings options"
+      ],
+      "responses": ["Let me explain our current savings schemes. We offer various options including fixed deposits starting at 7.5% p.a., recurring deposits at 7% p.a., and special schemes for senior citizens with additional 0.5% interest. Would you like specific details about any particular savings plan?"],
+      "context": ["investment_advice"]
+    },
+    {
+      "tag": "loan_eligibility",
+      "patterns": [
+        "Am I eligible for a loan?", "Loan eligibility criteria", "Check loan eligibility", "Qualification for loan", "Do I qualify for MSME loan?", "Business loan eligibility", "Who can apply for loan?",
+        "Loan requirements", "Required documents for loan", "Minimum income for loan",
+        "Business loan qualification", "Credit score requirements", "Eligibility calculator",
+        "Check if I qualify", "Loan approval criteria", "Application requirements",
+        "Required business vintage", "Years in business requirement", "Business turnover criteria",
+        "Income requirements", "Age criteria for loan", "Business type eligibility",
+        "Industry specific eligibility", "Sector wise qualification", "Required business documents",
+        "Financial statements needed", "Bank statement requirements", "GST return requirements", "ITR requirements", "Partnership firm eligibility", "Proprietorship eligibility",
+        "Company eligibility", "Startup loan eligibility", "New business loan criteria",
+        "Existing business criteria", "Manufacturing unit eligibility", "Service sector eligibility",
+        "Trading business eligibility", "Retail business criteria", "Small business eligibility", "Medium enterprise criteria", "Large business requirements",
+        "Minimum turnover needed", "Collateral requirements", "Security requirements",
+        "Am I eligible for a loan?", "Loan eligibility criteria", "Check loan eligibility", "Qualification for loan"
+      ],
+      "responses": ["I'll help you understand our loan eligibility criteria. For most business loans, we require: minimum 2 years of business operation, valid business registration, and minimum monthly income of ₹25,000. Would you like to know the specific requirements for your business type?"],
+      "context": ["loan_inquiry"]
+    },
+    {
+      "tag": "emi_calculation",
+      "patterns": [
+        "Calculate EMI", "EMI calculator", "Monthly installment calculation", "Loan EMI details",
+        "How much EMI for loan?", "Show EMI breakdown", "EMI payment schedule",
+        "Calculate monthly payment", "EMI for business loan", "Loan repayment calculator",
+        "What will be my EMI?", "EMI estimation", "Monthly EMI amount",
+        "Calculate loan installments", "Loan payment calculator", "EMI with interest",
+        "Principal and interest EMI", "EMI structure", "EMI bifurcation",
+        "EMI for loan amount", "Calculate loan payments", "Monthly loan payment",
+        "EMI for different tenures", "EMI comparison", "Lowest EMI option",
+        "Flexible EMI options", "EMI payment options", "EMI schedule",
+        "Advance EMI calculation", "EMI with processing fee", "Total EMI cost",
+        "EMI calculator with insurance", "EMI calculator with charges", "Net EMI amount",
+        "Gross EMI calculation", "EMI prepayment options", "EMI frequency options", "Weekly EMI calculation","EMI payment dates", "EMI due dates", "EMI start date",
+        "EMI end date", "EMI tenure options", "EMI duration calculation"],
+      "responses": ["I'll help you calculate your EMI. Please provide the loan amount, tenure, and interest rate you're interested in, and I'll show you the monthly installment breakdown."],
+      "context": ["loan_inquiry"]
+    },
+    {
+      "tag": "loan_status",
+      "patterns": [
+       "What is my loan status?", "Check loan application status", "Track my loan application", "Where is my loan application?", "Application tracking", "Loan progress check", "Has my loan been approved?", "Is my loan processed?", "Loan processing status", "Update on loan application", "Loan verification status", "Document verification status", "Application number status", "Reference number status", "Track application ID", "Check application progress", "Application under process status", "Processing stage check", "Pending document status", "Final approval status", "Sanction status", "Disbursement status", "Fund transfer status", "Loan activation status", "Know when loan approved", "Tell me loan progress", "Show application progress", "Need loan status update", "Want to know status", "Status inquiry for loan", "Loan tracking system", "Application tracking system", "Status checking system"
+      ],
+      "responses": ["Let me check your loan application status. Please provide your application reference number, and I'll tell you exactly where your application is in the process. I can show you the current stage, pending requirements if any, and expected timeline for completion."],
+      "context": ["loan_process", "application_tracking"]
+    },
+    {
+      "tag": "faqs",
+      "patterns": [
+        "Frequently asked questions", "Common questions", "General queries",
+        "Basic information", "Help guide", "Common doubts",
+        "Popular questions", "Most asked questions", "Regular queries",
+        "Standard questions", "Basic queries", "Common concerns",
+        "Service FAQs", "Product FAQs", "Loan FAQs",
+        "Account FAQs", "Technical FAQs", "Process FAQs",
+        "Documentation FAQs", "Payment FAQs", "Application FAQs",
+        "Interest rate FAQs", "Eligibility FAQs", "KYC FAQs",
+        "Quick answers", "Basic help", "General assistance",
+        "Common problems", "Typical issues", "Regular concerns"
+      ],
+      "responses": ["Here are answers to our most frequently asked questions. I can help you with information about loans, interest rates, documentation, and account services. What specific information would you like to know?"],
+      "context": ["general_info"]
+    },
+
+    {
+      "tag": "contact_details",
+      "patterns": [
+        "Contact information", "How to reach you", "Contact numbers",
+        "Office address", "Branch locations", "Email address",
+        "Customer service contact", "Support numbers", "Helpline numbers",
+        "24/7 support contact", "Emergency contact", "Toll free number",
+        "Website contact", "Social media contacts", "WhatsApp contact",
+        "Mobile app support", "Online support", "Chat support",
+        "Branch contact details", "Regional office contacts", "Head office address",
+        "Department contacts", "Specific branch contact", "Nearest branch contact","customer care","customer support"
+      ],
+      "responses": ["You can reach us through our customer care number at 8447648628 , email us at info@pinkcityfincap.com or visit our nearest branch."],
+      "context": ["customer_support"]
+    },
+    {
+      "tag": "recover_username",
+      "patterns": [
+        "I forgot my username", "Can't remember my user ID", "Help with forgotten username",
+        "How to recover username", "Reset my username", "Find my user ID",
+        "Lost my login credentials", "Username recovery process", "Get back my username",
+        "Retrieve forgotten username", "Help accessing my account", "Can't login - forgot username",
+        "Need help with username", "Username assistance needed", "Lost access to account",
+        "Account username recovery", "Help with user identification", "Forgot my login ID",
+        "Reset login credentials", "Account access help", "Login assistance needed",
+        "Username retrieval help", "How to get username back", "Unable to find username",
+        "Recover my account ID", "Help with lost username", "Find my account details",
+        "Restore my username", "Username lookup help", "Account identification help",
+        "Online banking username", "Mobile banking username", "Digital account username",
+        "Need my user identification", "Help with account access", "Username verification",
+        "Account username lookup", "Help with account ID", "Username search assistance",
+        "Find my login details", "Account credential help", "Login identification help",
+        "Username location help", "Account username search", "Help finding my ID",
+        "Username recovery options", "Ways to find username", "Methods to recover ID",
+        "Username retrieval process", "Account recovery steps", "Login recovery assistance",
+        "Forgotten account details", "Missing username help", "Lost account access help"
+      ],
+      "responses": ["Before proceeding, kindly enter your mobile number to confirm"],
+      "context": [""]
+    },
+    {
+      "tag": "reset_password",
+      "patterns": [
+        "How to reset password", "Forgot password", "Change password",
+        "Password recovery", "New password setup", "Password reset process",
+        "Unable to login", "Password not working", "Lost password",
+        "Password help", "Reset login credentials", "Password assistance",
+        "Account password reset", "Online password reset", "Mobile password reset",
+        "Forgot login password", "Transaction password reset", "MPIN reset",
+        "Security password change", "Authentication reset", "Access code reset"
+      ],
+      "responses": ["Before proceeding, kindly enter your mobile number to confirm"],
+      "context": [""]
+    },
+    {
+      "tag": "technical_issues",
+      "patterns": [
+        "Website not working", "App issues", "Technical problems",
+        "Login problems", "Transaction failed", "Error message",
+        "System down", "Payment error", "Connection issues",
+        "Unable to access", "Service unavailable", "Application error",
+        "Loading problem", "Screen frozen", "Account access issue",
+        "Mobile app crash", "Website error", "Online banking problem",
+        "Transaction timeout", "Payment processing error", "Server error"
+      ],
+      "responses": ["I understand you're experiencing technical difficulties. Let me help resolve this. Could you please provide more details about the specific issue you're facing? Our technical team is available 24/7 to assist you."],
+      "context": ["customer_support"]
+    },
+    {
+    "tag": "special_schemes",
+    "patterns": [
+      "Current schemes available", "Special loan offers", "Ongoing promotions",
+      "Festival schemes", "Seasonal offers", "Limited time schemes",  "Discount offers", "Promotional schemes",  "New loan schemes", "Latest offers", "Current promotions",
+      "Business loan schemes", "MSME schemes", "Enterprise schemes",
+      "Government schemes", "Subsidy schemes", "Interest subsidy",
+      "Special category schemes", "Women entrepreneur schemes", "SC/ST schemes",
+      "Rural business schemes", "Urban enterprise schemes", "Sector specific schemes",
+      "Industry schemes", "Manufacturing schemes", "Service sector schemes",
+      "Trading schemes", "Retail schemes", "Wholesale schemes",
+      "Startup schemes", "New business schemes", "Expansion schemes",
+      "Working capital schemes", "Term loan schemes", "Equipment financing schemes",
+      "Collateral free schemes", "Secured loan schemes", "Unsecured loan schemes"
+    ],
+    "responses": ["Let me tell you about our current special schemes and offers. We have several programs with preferential rates and terms for different business categories. Would you like to know about specific schemes for your business?"],
+    "context": ["loan_inquiry"]
+    },
+    {
+      "tag": "account_security",
+      "patterns": [
+        "Secure my account", "Account protection", "Security measures",
+        "Password protection", "Change password", "Reset password",
+        "Account safety tips", "Security guidelines", "Protect from fraud",
+        "Online banking security", "Mobile banking safety", "Digital security measures",
+        "Two-factor authentication", "Security verification", "OTP settings",
+        "Transaction password", "Login security", "Access protection",
+        "Suspicious activity", "Unauthorized access", "Account monitoring",
+        "Security alerts setup", "Transaction alerts", "Activity notifications",
+        "Block account access", "Freeze account", "Temporary block",
+        "Report lost phone", "Change registered mobile", "Update contact details",
+        "Security questions update", "Recovery options", "Backup authentication",
+        "Device management", "Trusted devices", "Remove old devices",
+        "Biometric security", "Fingerprint login", "Face recognition setup",
+        "PIN security", "MPIN setup", "Transaction PIN",
+        "Email security", "Communication safety", "Message authentication",
+        "Anti-phishing measures", "Fraud prevention", "Scam protection",
+        "Account review", "Security audit", "Safety check",
+        "Password guidelines", "Strong password tips", "Security best practices",
+        "Regular security updates", "Periodic safety checks", "Security maintenance",
+        "Emergency contact update", "Alternate contact setup", "Recovery contact"
+      ],
+      "responses": ["Account security is our top priority. Let me help you understand our security features and guide you through setting up additional protection measures for your account. What specific security aspect would you like to know more about?"],
+      "context": ["security"]
+    },
+    {
+      "tag": "complaint_handling",
+      "patterns": [
+        "File a complaint", "Register grievance", "Submit complaint form",
+        "Customer complaint process", "How to raise complaint", "Lodge a complaint",
+        "Complaint registration", "Service complaint", "Product complaint",
+        "Report service issue", "Raise concern", "Submit feedback",
+        "Complaint tracking", "Check complaint status", "Grievance status",
+        "Escalate complaint", "Unresolved complaint", "Pending complaint status",
+        "Customer service complaint", "Staff behavior complaint", "Process complaint",
+        "Technical issue complaint", "System problem report", "Application issue",
+        "Loan process complaint", "Documentation complaint", "Delay complaint",
+        "Interest rate complaint", "Charges complaint", "Fee dispute",
+        "Wrong deduction complaint", "Unauthorized charge complaint", "Extra fee complaint",
+        "Service quality issue", "Poor service complaint", "Unsatisfactory service",
+        "Branch complaint", "Officer complaint", "Staff complaint",
+        "Response time complaint", "Delayed response issue", "Slow process complaint",
+        "Online service issue", "Mobile app problem", "Website complaint",
+        "Transaction complaint", "Payment issue", "Processing complaint",
+        "Document verification complaint", "KYC process complaint", "Loan approval complaint",
+        "EMI calculation complaint", "Interest calculation issue", "Processing fee complaint",
+        "Foreclosure charge complaint", "Prepayment penalty issue", "Statement complaint","I want to file a complaint about my loan"
+      ],
+      "responses": ["I understand you want to file a complaint. Please provide details about your concern, and I'll guide you through our complaint resolution process. You can track your complaint status using the reference number we'll provide."],
+      "context": ["customer_support"]
+    },
+    {
+      "tag": "kyc_process",
+      "patterns": [
+        "Complete KYC process", "Update KYC details", "KYC documentation",
+        "KYC requirements", "Documents for KYC", "KYC verification process",
+        "Online KYC update", "Digital KYC process", "Video KYC option",
+        "KYC for new account", "KYC for loan", "Business KYC process",
+        "Individual KYC requirements", "Company KYC documents", "Partnership KYC needs",
+        "Address proof for KYC", "Identity proof for KYC", "Photo KYC process",
+        "KYC verification status", "Check KYC status", "Track KYC update",
+        "Pending KYC completion", "Incomplete KYC", "KYC rejection reason",
+        "Re-submit KYC", "Correct KYC details", "Update wrong KYC",
+        "KYC document list", "Required KYC papers", "Mandatory KYC documents",
+        "KYC for existing customer", "Regular KYC update", "Periodic KYC renewal",
+        "Annual KYC update", "KYC validity period", "KYC expiry date",
+        "KYC compliance rules", "Latest KYC norms", "Current KYC guidelines",
+        "Simplified KYC process", "Quick KYC update", "Easy KYC completion",
+        "Remote KYC option", "Home KYC service", "Doorstep KYC facility",
+        "Business owner KYC", "Director KYC requirement", "Partner KYC needs",
+        "Additional KYC documents", "Supporting KYC papers", "Extra KYC requirements",
+        "Foreign national KYC", "NRI KYC process", "Overseas customer KYC"
+      ],
+      "responses": ["I'll guide you through our KYC process. The basic requirements include identity proof, address proof, and photographs. For businesses, we need additional documents like registration certificates and business proof. Would you like to know the specific requirements for your case?"],
+      "context": ["kyc"]
+    },
+    {
+      "tag": "personal_finance_tips",
+      "patterns": [
+        "Financial advice", "Money management tips", "Saving tips", "Investment guidance", "Budget planning", "Financial planning", "Wealth management", "Money saving ideas", "Financial goals", "Personal finance help", "Financial literacy", "Money tips", "Smart money management", "Financial education", "Budget tips", "Saving strategies", "Investment ideas", "Wealth creation", "Financial freedom", "Money growth tips", "Expense management", "How to manage money wisely?", "Best ways to save money", "How to create a financial plan?", "Steps to financial independence", "Tips for reducing expenses", "How to avoid unnecessary spending?", "Emergency fund planning", "How to build wealth over time?", "Best ways to invest money", "Strategies for long-term savings", "How to plan for retirement?", "Ways to increase savings", "Debt management tips", "How to clear debt faster?", "Credit score improvement tips", "How to track expenses effectively?", "Best financial habits", "How to avoid financial mistakes?", "Smart budgeting techniques", "How to set financial goals?", "Tips for handling inflation", "Money-saving hacks", "How to manage monthly expenses?", "How to build passive income?", "Beginner investment tips", "Best personal finance practices", "How to achieve financial security?", "Understanding financial risks", "How to grow money safely?", "Avoiding common financial traps", "Managing income effectively", "How to plan for big purchases?", "Best ways to use credit wisely", "Steps to improve financial health"
+      ],
+      "responses": ["Here are some valuable personal finance tips to help you manage your money better. Start with creating a budget, maintain an emergency fund, and invest wisely. Would you like specific advice for your financial goals?"],
+      "context": ["financial_advice"]
+    },
+{
+  "tag": "interest_rates",
+  "patterns": [
+    "What is the interest rate?", "Current interest rates", "Latest loan interest rates",
+    "Interest rates for loans","Interest Rates", "Interest Rate","How much interest do I have to pay?",
+    "Rate of interest", "What are your interest rates?", "Loan interest details"
+     ],
+  "responses": [
+    "Our interest rates vary based on loan type, tenure, and customer profile. Would you like details on personal loans, business loans, Vehicle loans, or another type?"
+  ],
+  "context": ["interest_info"]
+}
+
+  ]
+}
+
+
+
+
